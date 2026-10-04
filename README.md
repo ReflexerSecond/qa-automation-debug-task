@@ -20,4 +20,5 @@ To run the project locally, make sure you have:
 From the project root, run:
 
 ```bash
-mvn clean test
+mvn clean test -Dselenide.headless=true -Dselenide.browserSize=1920x1080 -Dselenide.timeout=6000
+```
