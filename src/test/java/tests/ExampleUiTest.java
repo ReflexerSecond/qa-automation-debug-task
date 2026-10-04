@@ -17,7 +17,7 @@ public class ExampleUiTest extends WebFixture {
                 .shouldBe(visible)
                 .shouldHave(text("Web form"));
         page.fillForm("QA Automation");
-        page.verifyForm();
+        page.verifyForm("QA Automation");
         page.submit();
         $("#message")
                 .shouldBe(visible)

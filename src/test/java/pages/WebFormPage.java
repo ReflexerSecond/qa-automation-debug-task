@@ -10,10 +10,8 @@ public class WebFormPage {
 
     private final SelenideElement textInput = $("[name='my-text']");
     private final SelenideElement checkbox = $("[name='my-check']");
-    private String expectedText;
 
     public WebFormPage fillForm(String text) {
-        expectedText = textInput.getValue();
         textInput.setValue(text);
         checkbox
                 .setSelected(true)
@@ -21,7 +19,7 @@ public class WebFormPage {
         return this;
     }
 
-    public WebFormPage verifyForm() {
+    public WebFormPage verifyForm(String expectedText) {
         textInput.shouldHave(value(expectedText));
         return this;
     }
